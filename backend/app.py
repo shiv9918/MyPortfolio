@@ -7,7 +7,10 @@ import os
 
 app = Flask(__name__)
 load_dotenv()
-CORS(app)
+CORS(app, origins=[
+    "http://localhost:5173",  # Vite dev server
+    "https://your-frontend.vercel.app"  # Replace with your actual Vercel domain
+])
 # Example: postgresql+psycopg2://username:password@localhost:5432/contacts_db
 app.config['SQLALCHEMY_DATABASE_URI'] = os.getenv('DATABASE_URL')
 db = SQLAlchemy(app)
