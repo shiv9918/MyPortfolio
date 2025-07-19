@@ -124,14 +124,14 @@ const Hero: React.FC<HeroProps> = ({ is3DMode }) => {
               </motion.button>
             </Link>
             
-            <motion.button
-              whileHover={{ scale: 1.05, boxShadow: '0 0 30px #00D4FF' }}
-              whileTap={{ scale: 0.95 }}
+            <a
+              href="/Resume.pdf"
+              download
               className="flex items-center gap-2 px-8 py-4 border border-cyan-400 text-cyan-400 font-semibold rounded-lg hover:bg-cyan-400/10 transition-all duration-300"
             >
               <Download size={18} />
               Download Resume
-            </motion.button>
+            </a>
           </motion.div>
         </motion.div>
       </div>
